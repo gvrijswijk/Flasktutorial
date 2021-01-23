@@ -14,4 +14,14 @@ def index():
 @app.route('/tmp')
 def tmp():
     user = {'username': 'Gerben'}
-    return render_template('index.html', user=user)
+    posts = [
+        {
+            'author': {'username': 'John'},
+            'body': 'Beautiful day in Portland!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]
+    return render_template('index.html', user=user, posts=posts)
