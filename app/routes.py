@@ -10,3 +10,8 @@ from app import app
 def index():
     user = {'username': 'Gerben'}
     return render_template('index.html', title='Home', user=user)
+
+@app.route('/tmp')
+def tmp():
+    user = {'username': 'Gerben'}
+    return render_template('index.html', user=user)
