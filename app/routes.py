@@ -9,11 +9,6 @@ from app import app
 @app.route('/index')
 def index():
     user = {'username': 'Gerben'}
-    return render_template('index.html', title='Home', user=user)
-
-@app.route('/tmp')
-def tmp():
-    user = {'username': 'Gerben'}
     posts = [
         {
             'author': {'username': 'John'},
@@ -24,4 +19,4 @@ def tmp():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    return render_template('index.html', user=user, posts=posts)
+    return render_template('index.html', title='Home', user=user, posts=posts)
